@@ -1,0 +1,16 @@
+.ticket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-top: 1px solid royalblue;
+    text-decoration: none;
+    color: black;
+
+    &__cell {
+        word-break: break-all;
+        width: 300px;
+        padding: 1em;
+        text-align: center;
+    }
+}

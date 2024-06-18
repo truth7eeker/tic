@@ -1,0 +1,27 @@
+.tickets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.ticket-wrapper {
+    border: 1px solid royalblue;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0;
+    height: max-content;
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    
+    &__cell {
+        width: 300px;
+        text-align: center;
+        padding-bottom: .5em
+    }
+}

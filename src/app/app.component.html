@@ -1,0 +1,16 @@
+<div class="app">
+  <app-header />
+  @if(this.currentRoute() !== '/login') {
+    <xng-breadcrumb />
+  }
+  <main>
+    <router-outlet />
+  </main>
+  <ng-http-loader 
+         backgroundColor="#2c4fdb"
+         backdropBackgroundColor="#dfedf5"
+         [debounceDelay]="100"
+         opacity=".4"
+         spinner="sk-three-bounce" 
+   />
+</div>

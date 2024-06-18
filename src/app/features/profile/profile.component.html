@@ -1,0 +1,53 @@
+<div class="centered">
+    <h3>Profile</h3>
+    <form  class="profile-form" 
+           [formGroup]="profileInfo"
+           (ngSubmit)="onSubmit()"
+    >
+        <app-input 
+            label="id"
+            type="text"
+            [readonly]="true"
+            [control]="profileInfo.controls.id"
+
+        />
+        <app-input 
+            label="login"
+            type="text"
+            [control]="profileInfo.controls.login"
+        />
+        <app-input 
+            label="name"
+            type="text"
+            [control]="profileInfo.controls.firstname"
+        />
+        <app-input 
+            label="last name"
+            type="text"
+            [control]="profileInfo.controls.lastname"
+        />
+        <app-input 
+            label="birthday"
+            type="date"
+            [control]="profileInfo.controls.birthday"
+        />
+        <label for="city"> City
+           <select 
+                name="city" 
+                id="city"
+                [formControl]="profileInfo.controls.city"
+           >
+            <option value="Madrid">Madrid</option>
+            <option value="Meccs">Mecca</option>
+            <option value="Amsterdam">Amsterdam</option>
+            <option value="Lyon">Lyon</option>
+        </select>
+        </label>
+        <div class="centered">
+        <app-main-btn 
+            type="submit"
+            title="Save"
+        />
+        </div>
+    </form>
+</div>

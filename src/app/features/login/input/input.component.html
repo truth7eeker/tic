@@ -1,0 +1,22 @@
+<div class="relative">
+    <label for="{{ label() }}" 
+        class="login-form__label"
+        >
+    {{ label() | titlecase }}
+    <input 
+            id="{{ label() }}" 
+            type={{type()}}
+            [formControl]="control()!"
+            #password 
+    />
+    </label>
+
+    @if (label() === 'password') {
+        <fa-icon 
+            class="login-form__icon"
+            [icon]="isFieldOpen ? faUnlock : faLock"
+            (click)="togglePassword()"
+        >
+        </fa-icon>
+    }
+</div>

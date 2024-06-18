@@ -1,0 +1,24 @@
+.relative {
+    position: relative;
+}
+
+.login-form__label {
+    display: flex;
+    flex-direction: column;
+    gap: .2em;
+    width: 250px;
+
+    input {
+        border-radius: 5px;
+        outline: none;
+        border-color: darkgrey;
+        height: 25px;
+    }
+}
+
+.login-form__icon {
+    position: absolute;
+    right: 10px;
+    top: 28px;
+    cursor: pointer;
+}

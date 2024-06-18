@@ -1,0 +1,20 @@
+<div class="tickets">
+    <h3>Tickets</h3> 
+    <app-main-btn 
+      title="Add Ticket"
+      type="button"
+      (click)="openModel()"
+    />
+  
+  <div class="ticket-wrapper">
+    <div class="ticket-header">
+        <div class="ticket-header__cell">Id</div>
+        <div class="ticket-header__cell">Title</div>
+        <div class="ticket-header__cell">Date</div>
+    </div>
+    @for(ticket of store.tickets(); track ticket) {
+        <app-ticket-row [ticket]="ticket" />
+    }
+    <app-modal />
+</div>
+

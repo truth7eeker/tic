@@ -1,0 +1,22 @@
+<div [class]="['modal', 'centered', modalService.isOpen() ? '' : 'hidden']">
+    <form [formGroup]="newTicket" (ngSubmit)="saveNewTicket()" class="centered">
+        <h3>Add new ticket</h3>
+        <app-input 
+            type="text"
+            label="title"
+            [control]="newTicket.controls.title"
+    />
+        <app-input 
+            type="datetime-local"
+            label="date"
+            [control]="newTicket.controls.timestamp"
+    />
+    <div class="centered">
+        <app-main-btn
+            title="Add"
+            type="submit"
+        />
+    </div>
+        
+    </form>
+</div>

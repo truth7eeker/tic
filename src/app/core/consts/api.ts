@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://civicmilk-us.backendless.app/api'

@@ -1,0 +1,36 @@
+<div class="centered">
+    <h3>Ticket Details</h3>
+    <form
+        class="ticket-details"
+        [formGroup]="ticketInfo"
+    >
+        <app-input 
+            type="text"
+            label="id"
+            [readonly]="true"
+            [control]="ticketInfo.controls.id"
+        />
+        <app-input 
+            type="text"
+            label="title"
+            [control]="ticketInfo.controls.title"
+        />
+        <app-input 
+            type="datetime-local"
+            label="date"
+            [control]="ticketInfo.controls.timestamp"
+        />
+        <div class="spaced">
+            <app-main-btn 
+                type="submit"
+                title="Save"
+                (click)="saveTicket()"
+            />
+            <app-main-btn
+                type="submit"
+                title="Delete"
+                (click)="deleteTicket()"
+            />
+        </div>
+    </form>
+</div>

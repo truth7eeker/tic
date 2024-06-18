@@ -1,0 +1,28 @@
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    height: 100%;
+}
+
+.login-form {
+    font-size: 1.1rem;
+
+ &__btn {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border-style: none;
+    cursor: pointer;
+    background:  royalblue;
+    color: white;
+    font-size: 1rem;
+ }
+
+ .err-text {
+    color: red;
+    font-size: .9rem;
+ }
+}
+

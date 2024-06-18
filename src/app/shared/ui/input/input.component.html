@@ -1,0 +1,8 @@
+<label [for]="label()" class="label"> {{label() | titlecase}}:
+    <input
+        [id]="label()"
+        [type]="type()"
+        [readOnly]="readonly()"
+        [formControl]="control()!"
+    />
+</label>

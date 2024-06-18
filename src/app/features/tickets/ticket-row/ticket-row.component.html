@@ -1,0 +1,9 @@
+<a class="ticket"
+    [routerLink]="['/ticket', ticket()?.id]"
+    (click)="openTicket()"
+>
+    <div class="ticket__cell">{{ticket()?.id}}</div>
+    <div class="ticket__cell">{{ticket()?.title}}</div>
+    <div class="ticket__cell">{{ticket()?.timestamp | date : 'dd/MM/YYYY H:mm'}}</div>
+</a>
+

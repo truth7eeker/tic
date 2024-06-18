@@ -1,0 +1,27 @@
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+  height: 100%;
+
+  .profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    
+    label {
+      display: flex;
+      flex-direction: column;
+      width: 100%
+    }
+    select {
+      border-radius: 5px;
+      outline: none;
+      border-color: darkgrey;
+      height: 25px;
+      width: inherit;
+    }
+  }
+}

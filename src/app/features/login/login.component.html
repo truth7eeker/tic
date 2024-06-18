@@ -1,0 +1,25 @@
+<div class="centered login-form">
+    <h3>Let's log you in</h3>
+    <form class="centered" [formGroup]="loginData" (ngSubmit)="loginUser()">
+        <app-input 
+            type="text"
+            label="login"
+            [control]="loginData.controls.login"
+        />
+        <app-input 
+            type="password"
+            label="password"
+            [control]="loginData.controls.password"
+        />
+         @if (authService.authErr()) {
+            <p class="err-text">Wrong credentials</p>
+            }
+        <app-main-btn 
+            type="submit"
+            title="Log in"
+        />
+    </form>
+</div>
+
+
+

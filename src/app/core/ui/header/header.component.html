@@ -1,0 +1,27 @@
+<header class="header">
+  <h1 class="header__logo">
+    <a class="header__link"> 
+      Tickets App 
+    </a>
+  </h1>
+  @if(token || store.user().id) {
+    <nav class="header__nav">
+      <ul class="header__links">
+        @for (page of pages; track page) {
+        <li>
+          <a
+            class="header__link"
+            [routerLink]="getRouterLink(page)"
+            routerLinkActive="header__link--active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            (click)="logout(page)"
+            >
+              {{ page }}
+          </a>
+        </li>
+        }
+      </ul>
+    </nav>
+  }
+  
+</header>
