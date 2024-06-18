@@ -1,6 +1,6 @@
 ## How to run locally
 ```sh
-npm i
+npm install --force
 npm start
 ```
 ## Operations
